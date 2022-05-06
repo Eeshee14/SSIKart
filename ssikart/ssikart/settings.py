@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Apps
+    'accounts',
     'home',
+    'category',
 ]
 
 MIDDLEWARE = [
@@ -121,10 +123,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT =  BASE_DIR / 'static'
 STATICFILES_DIRS = []
-print(STATIC_ROOT)
-print("BASE:", BASE_DIR)
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+ 
