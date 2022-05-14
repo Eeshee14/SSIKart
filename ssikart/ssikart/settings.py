@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'accounts',
     'home',
     'category',
+
+    # Third Party Packages
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -127,6 +130,9 @@ AUTH_USER_MODEL = 'accounts.Account'
 STATIC_URL = 'static/'
 STATIC_ROOT =  BASE_DIR / 'static'
 STATICFILES_DIRS = []
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 
 # Default primary key field type
