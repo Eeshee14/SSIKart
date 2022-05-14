@@ -2,7 +2,6 @@ from re import U
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
-
 # Create your models here.
 
 class MyAccountManager(BaseUserManager):
@@ -56,12 +55,12 @@ class Account(AbstractBaseUser):
     is_superadmin = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELD = ['username', 'first_name', 'last_name']
+    REQUIRED_FIELDS = ['username', 'first_name', 'last_name']
 
     objects = MyAccountManager()
 
     def __str__(self):
-        return self.email
+        return f"{self.id} - {self.email}"
 
     def has_perm(self, perm, obj=None):
         return self.is_admin
