@@ -4,9 +4,9 @@ from accounts.models import Account
 
 
 class AccountAdmin(UserAdmin):
-    list_display = ('id', 'email', 'first_name', 'last_name', 'username', 'last_login',  'date_joined', 'is_active')
+    list_display = ('id', 'email', 'first_name', 'last_name', 'username', 'last_login','date_joined', 'is_active')
     list_display_links = ('email', 'id')
-    readonly_fields =('last_login', 'date_joined')
+    readonly_fields = ('last_login', 'date_joined')
     ordering = ('-date_joined',)
 
     filter_horizontal = ()
@@ -14,5 +14,3 @@ class AccountAdmin(UserAdmin):
     fieldsets = ()
 
 admin.site.register(Account, AccountAdmin)
-
-

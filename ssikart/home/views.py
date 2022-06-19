@@ -13,4 +13,4 @@ def home(request):
 
 
 def about(request):
-    return HttpResponse("<h1> Django E-Commerce Project </h1>")
+    return HttpResponse("<h1> Django E-Commerce Project by Eeshee Shriwas </h1>")
