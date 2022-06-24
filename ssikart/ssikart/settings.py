@@ -74,7 +74,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'category.context_processors.menu_links',
-                
+                'carts.context_processors.counter',
             ],
         },
     },
@@ -129,6 +129,14 @@ USE_TZ = True
 
 AUTH_USER_MODEL = 'accounts.Account'
 
+
+# SMTP Configuration
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'your_email'
+EMAIL_HOST_PASSWORD = 'your_app_password'
+EMAIL_USE_TLS = True
 
 
 # Static files (CSS, JavaScript, Images)
